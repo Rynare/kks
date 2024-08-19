@@ -1,0 +1,180 @@
+html,
+body,
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.montserrat-400 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 26px;
+}
+
+.navbar {
+    --bs-navbar-toggler-focus-width: 0 !important;
+    transition: all ease-in-out 350ms;
+}
+
+.navbar.scrolled {
+    background-color: #0b162e !important;
+}
+
+.navbar-brand img {
+    max-height: 50px;
+    width: auto;
+}
+
+.navbar-brand-text img {
+    width: auto;
+    height: 26px;
+}
+
+.navbar-brand-divider {
+    position: absolute;
+    left: 20px;
+    right: 0;
+    height: 1px;
+    background-color: white;
+}
+
+.navbar-brand-fullname {
+    font-size: 8px;
+    font-size: 8px;
+    display: block;
+    line-height: 20px;
+}
+
+.navbar .wa-wrapper {
+    --icon-size: 24px;
+    --icon-wrapper-size: calc(var(--icon-size) + 1px);
+    background-color: #74af62;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    font-size: var(--icon-size);
+    width: var(--icon-wrapper-size);
+    height: var(--icon-wrapper-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2px;
+}
+
+.jumbotron .slider-img {
+    object-fit: cover;
+    min-height: 270px;
+    max-width: 100%;
+    width: auto;
+    object-position: right;
+}
+
+html body *:is(.btn, [type=button]) {
+    outline: none !important;
+    border: none !important;
+}
+
+html body *:is(.btn, [type=button], button):focus {
+    outline: none !important;
+    border: none !important;
+}
+
+.jumbotron .caption {
+    bottom: 32px;
+    position: relative;
+}
+
+.caption .caption-title {
+    font-size: 26px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.caption .caption-desc {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.caption-author {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+.right-arrow-svg {
+    --right-arrow-size: 24px;
+    background-color: #0d3b59;
+    aspect-ratio: 1/1;
+    padding: 3px;
+    height: calc(var(--right-arrow-size) + 3px);
+}
+
+.right-arrow-svg svg {
+    color: white;
+    font-size: var(--right-arrow-size);
+}
+
+.right-arrow-svg+span {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+section .our-skill-img {
+    width: 100%;
+    height: auto;
+}
+
+.skill-title {
+    font-size: 11px;
+    font-weight: 500;
+    color: #b50811;
+    letter-spacing: 1px;
+}
+
+.skill-excerp {
+    font-size: 26px;
+    margin-bottom: 20px;
+    line-height: 1.25;
+}
+
+.skill-desc {
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.hamburgers-icon svg {
+    color: white;
+    font-size: 24px;
+}
+
+.our-experience-img {
+    width: 100%;
+    height: auto;
+}
+
+.more-about-us .right-arrow-svg {
+    background-color: #b50811;
+}
+
+section.our-experience {
+    background-color: #0b162e;
+}
+
+.experience-title {
+    font-size: 11px;
+    font-weight: 500;
+    color: #b50811;
+    letter-spacing: 1px;
+}
+
+.experience-excerp {
+    font-size: 26px;
+}
+
+.experience-desc {
+    font-weight: 300;
+    font-size: 13px;
+}
