@@ -4,7 +4,8 @@ body,
     font-family: 'Times New Roman', Times, serif;
 }
 
-.montserrat-400 {
+.montserrat-400,
+footer * {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -22,7 +23,7 @@ body,
 }
 
 .navbar-brand img {
-    max-height: 50px;
+    max-height: 64px;
     width: auto;
 }
 
@@ -58,15 +59,7 @@ body,
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 2px;
-}
-
-.jumbotron .slider-img {
-    object-fit: cover;
-    min-height: 270px;
-    max-width: 100%;
-    width: auto;
-    object-position: right;
+    padding: 18px;
 }
 
 html body *:is(.btn, [type=button]) {
@@ -79,9 +72,20 @@ html body *:is(.btn, [type=button], button):focus {
     border: none !important;
 }
 
+.jumbotron .slider-img {
+    object-fit: cover;
+    min-height: 270px;
+    max-width: 100%;
+    width: auto;
+    object-position: right;
+    aspect-ratio: 1.3 / 1;
+}
+
 .jumbotron .caption {
     bottom: 32px;
     position: relative;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .caption .caption-title {
@@ -101,6 +105,30 @@ html body *:is(.btn, [type=button], button):focus {
     font-weight: 500;
     letter-spacing: 1px;
     color: #000;
+}
+
+@media screen and (min-width: 768px) {
+    .jumbotron .slider-img {
+        object-position: center;
+    }
+
+    .jumbotron {
+        position: relative;
+    }
+
+    .jumbotron .caption {
+        bottom: 0;
+        top: 0;
+        position: absolute;
+        background-color: transparent;
+        box-shadow: none;
+        color: white !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 75%;
+    }
 }
 
 .right-arrow-svg {
@@ -145,6 +173,12 @@ section .our-skill-img {
     font-size: 13px;
 }
 
+.hamburgers-icon {
+    width: 36px;
+    aspect-ratio: 1 / 1;
+    background-color: #0b162e;
+}
+
 .hamburgers-icon svg {
     color: white;
     font-size: 24px;
@@ -177,4 +211,117 @@ section.our-experience {
 .experience-desc {
     font-weight: 300;
     font-size: 13px;
+}
+
+section.our-product {
+    background-color: #efefef;
+}
+
+.product-title {
+    font-size: 11px;
+    font-weight: 500;
+    color: #b50811;
+    letter-spacing: 1px;
+}
+
+.product-excerp {
+    font-size: 26px;
+}
+
+.product-item {
+    margin-top: 30px;
+}
+
+.product-name {
+    font-size: 14px;
+    text-align: center;
+}
+
+.product-pict {
+    aspect-ratio: 296 / 208;
+    width: 296px;
+}
+
+.product-link {
+    font-size: 11px;
+}
+
+.product-link svg-from-file {
+    font-size: 15px;
+}
+
+.quality-title {
+    font-size: 11px;
+    font-weight: 500;
+    color: #b50811;
+    letter-spacing: 1px;
+}
+
+.quality-container .quality-img {
+    width: 100%;
+}
+
+.quality-item .quality-name {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+}
+
+section.our-dedication {
+    background-color: #efefef;
+}
+
+.dedication-desc {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+footer {
+    background-color: #0b162e;
+}
+
+footer [class|="part"]:not(.part-logo) {
+    border-top: 4px solid white;
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+footer .part-logo img {
+    max-height: 70px;
+    height: auto;
+}
+
+div:is(.part-contact, .part-address) strong {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.footer-email,
+.footer-phone,
+.footer-address,
+footer .nav-link {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.footer-email {
+    color: #ff2929;
+}
+
+.part-sitemap .nav-link {
+    font-weight: 700;
+}
+
+footer .copyright * {
+    font-size: 12px;
+    line-height: 25px;
+    color: #fff;
+    margin: 0;
+    opacity: .5;
+    display: block;
+}
+
+footer .copyright h5 {
+    opacity: .7;
 }
