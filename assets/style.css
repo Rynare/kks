@@ -13,23 +13,31 @@ footer * {
     line-height: 26px;
 }
 
+section {
+    overflow: hidden;
+    min-height: 100vh;
+}
+
 .navbar {
     --bs-navbar-toggler-focus-width: 0 !important;
     transition: all ease-in-out 350ms;
 }
 
-.navbar.scrolled {
+.navbar.scrolled,
+.navbar.nav-showed {
     background-color: #0b162e !important;
 }
 
 .navbar-brand img {
     max-height: 64px;
     width: auto;
+    transition: all ease-in-out 350ms;
 }
 
 .navbar-brand-text img {
     width: auto;
     height: 26px;
+    transition: all ease-in-out 350ms;
 }
 
 .navbar-brand-divider {
@@ -38,6 +46,7 @@ footer * {
     right: 0;
     height: 1px;
     background-color: white;
+    transition: all ease-in-out 350ms;
 }
 
 .navbar-brand-fullname {
@@ -45,6 +54,7 @@ footer * {
     font-size: 8px;
     display: block;
     line-height: 20px;
+    transition: all ease-in-out 350ms;
 }
 
 .navbar .wa-wrapper {
@@ -60,6 +70,33 @@ footer * {
     align-items: center;
     justify-content: center;
     padding: 18px;
+}
+
+.navbar .nav-link {
+    color: white !important;
+}
+
+nav.navbar.scrolled:not(.nav-showed) :is(.navbar-brand, .navbar-brand-text) img {
+    align-self: center !important;
+}
+
+nav.navbar.scrolled:not(.nav-showed) .navbar-brand-text img {
+    margin-top: 2px !important;
+}
+
+nav.navbar.scrolled:not(.nav-showed) .navbar-brand img {
+    height: 44px;
+    margin-top: 1px !important;
+}
+
+nav.navbar.scrolled:not(.nav-showed) :is(.navbar-brand-fullname, .navbar-brand-divider) {
+    display: none;
+}
+
+.hamburgers-icon {
+    width: 36px;
+    aspect-ratio: 1 / 1;
+    background-color: #0d3b59;
 }
 
 html body *:is(.btn, [type=button]) {
@@ -107,36 +144,11 @@ html body *:is(.btn, [type=button], button):focus {
     color: #000;
 }
 
-@media screen and (min-width: 768px) {
-    .jumbotron .slider-img {
-        object-position: center;
-    }
-
-    .jumbotron {
-        position: relative;
-    }
-
-    .jumbotron .caption {
-        bottom: 0;
-        top: 0;
-        position: absolute;
-        background-color: transparent;
-        box-shadow: none;
-        color: white !important;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-        width: 75%;
-    }
-}
-
 .right-arrow-svg {
     --right-arrow-size: 24px;
     background-color: #0d3b59;
     aspect-ratio: 1/1;
-    padding: 3px;
-    height: calc(var(--right-arrow-size) + 3px);
+    height: calc(var(--right-arrow-size) + 6px);
 }
 
 .right-arrow-svg svg {
@@ -171,12 +183,6 @@ section .our-skill-img {
 .skill-desc {
     font-weight: 300;
     font-size: 13px;
-}
-
-.hamburgers-icon {
-    width: 36px;
-    aspect-ratio: 1 / 1;
-    background-color: #0b162e;
 }
 
 .hamburgers-icon svg {
@@ -259,6 +265,14 @@ section.our-product {
 
 .quality-container .quality-img {
     width: 100%;
+    max-width: 210px;
+}
+
+.quality-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .quality-item .quality-name {
@@ -280,8 +294,8 @@ footer {
     background-color: #0b162e;
 }
 
-footer [class|="part"]:not(.part-logo) {
-    border-top: 4px solid white;
+footer [class|="part"]:not(.part-logo)>* {
+    border-top: 3.5px solid white;
     padding-top: 20px;
     margin-top: 30px;
 }
